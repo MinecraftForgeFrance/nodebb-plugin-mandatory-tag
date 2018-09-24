@@ -2,10 +2,15 @@
   "id": "nodebb-plugin-mandatory-tag",
   "url": "https://github.com/MinecraftForgeFrance/nodebb-plugin-mandatory-tag",
   "library": "./library.js",
-  "less": [
+  "templates": "./static/templates",
+  "acpScripts": [
+    "static/js/admin.js"
   ],
   "hooks": [
+    { "hook": "static:app.load", "method":"init" },
+    { "hook": "filter:config.get", "method": "appendConfig" },
+    { "hook": "filter:admin.header.build", "method": "addToAdminNav" },
+    { "hook": "filter:topic.post", "method": "topicPost" }
   ],
-  "scripts": [
-  ]
+  "languages": "languages"
 }
