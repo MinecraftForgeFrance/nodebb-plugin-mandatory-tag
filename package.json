@@ -1,0 +1,22 @@
+{
+  "name": "nodebb-plugin-mandatory-tag",
+  "version": "0.0.1",
+  "description": "A NodeBB plugin",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinecraftForgeFrance/nodebb-plugin-mandatory-tag.git"
+  },
+  "author": {
+    "name": "Superloup10",
+    "email": "Superloup10@gmail.com"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/MinecraftForgeFrance/nodebb-plugin-mandatory-tag/issues"
+  },
+  "homepage": "https://github.com/MinecraftForgeFrance/nodebb-plugin-mandatory-tag#readme",
+  "nbbpm": {
+    "compatibility": "^1.10.0"
+  }
+}

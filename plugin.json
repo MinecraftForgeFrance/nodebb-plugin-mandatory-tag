@@ -1,0 +1,11 @@
+{
+  "id": "nodebb-plugin-mandatory-tag",
+  "url": "https://github.com/MinecraftForgeFrance/nodebb-plugin-mandatory-tag",
+  "library": "./library.js",
+  "less": [
+  ],
+  "hooks": [
+  ],
+  "scripts": [
+  ]
+}
