@@ -6,11 +6,6 @@ define('admin/plugins/mandatory-tag', ['settings'], function (Settings) {
     MandatoryTag.init = function () {
         Settings.load('mandatory-tag', $('.mandatory-tag-settings'));
 
-        let cids = [];
-        for (let inputChecked of $('input:checked')) {
-            cids.push(inputChecked.name);
-        }
-
         $('#save').on('click', function () {
             Settings.save('mandatory-tag', $('.mandatory-tag-settings'), function () {
                 app.alert({

@@ -5,7 +5,7 @@
             <!-- BEGIN categories -->
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" name="{categories.cid}">
+                    <input type="checkbox" name="cid-{categories.cid}">
                     {categories.name}
                 </label>
             </div>
