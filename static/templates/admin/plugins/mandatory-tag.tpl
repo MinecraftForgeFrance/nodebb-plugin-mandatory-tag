@@ -1,14 +1,19 @@
 <form role="form" class="mandatory-tag-settings">
     <div class="row">
-        <div class="col-sm-2 col-xs-12 settings-header">General Settings</div>
+        <div class="col-sm-2 col-xs-12 settings-header">Minimum tags for category</div>
         <div class="col-sm-10 col-xs-12">
             <!-- BEGIN categories -->
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" name="cid-{categories.cid}">
-                    {categories.name}
-                </label>
-            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label for="cid-{categories.cid}">{categories.name}</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input id="cid-{categories.cid}" name="cid-{categories.cid}" class="form-control" type="number" value="0">
+                    </div>
+                </div>
+				
+			</div>
             <!-- END -->
         </div>
     </div>

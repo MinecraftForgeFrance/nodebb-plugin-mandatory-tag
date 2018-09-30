@@ -26,17 +26,25 @@ const MandatoryTag = {
     addToAdminNav(header, callback) {
         header.plugins.push({
             route: "/plugins/mandatory-tag",
-            name: "MandatoryTag"
+            name: "Mandatory Tag"
         });
         callback(null, header);
     },
-    topicPostOrEdit(data, callback) {
-        if(data.tags && data.tags.length == 0 && MandatoryTag.config['cid-' + data.cid] === 'on') {
-            return callback(new Error('[[mandatorytag:no-tags]]'));
-        }
-        callback(null, data);
+    topicPost(data, callback) {
+        checkTags(data, data.cid, data.tags, callback);
+    },
+    topicEdit(data, callback) {
+        checkTags(data, data.topic.cid, data.data.tags, callback);
     }
 };
+
+function checkTags(data, cid, tags, callback)
+{
+    if(tags && tags.length < MandatoryTag.config['cid-' + cid]) {
+        return callback(new Error('[[mandatorytag:no-tags,' + MandatoryTag.config['cid-' + cid] + ']]'));
+    }
+    callback(null, data);
+}
 
 function renderAdmin(req, res, next) {
     async.waterfall([
