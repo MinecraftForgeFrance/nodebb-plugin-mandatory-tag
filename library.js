@@ -1,8 +1,8 @@
-const meta = module.parent.require("./meta");
-const async = module.parent.require("async");
-const db = module.parent.require("./database");
-const categories = module.parent.require("./categories");
-const winston = module.parent.require('winston');
+const meta = require.main.require("./src/meta");
+const async = require.main.require("async");
+const db = require.main.require("./src/database");
+const categories = require.main.require("./src/categories");
+const winston = require.main.require('winston');
 
 const MandatoryTag = {
     config: {},

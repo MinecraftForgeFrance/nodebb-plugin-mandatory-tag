@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-mandatory-tag",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A NodeBB plugin",
   "main": "library.js",
   "repository": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/MinecraftForgeFrance/nodebb-plugin-mandatory-tag#readme",
   "nbbpm": {
-    "compatibility": "^1.10.0"
+    "compatibility": "^1.11.0"
   }
 }
